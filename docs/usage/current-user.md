@@ -13,7 +13,7 @@ Return a dependency callable to retrieve currently authenticated user, passing t
 * `active`: If `True`, throw `401 Unauthorized` if the authenticated user is inactive. Defaults to `False`.
 * `verified`: If `True`, throw `403 Forbidden` if the authenticated user is not verified. Defaults to `False`.
 * `superuser`: If `True`, throw `403 Forbidden` if the authenticated user is not a superuser. Defaults to `False`.
-* `get_enabled_backends`: Optional dependency callable returning a list of enabled authentication backends. Useful if you want to dynamically enable some authentication backends based on external logic, like a configuration in database. By default, all specified authentication backends are enabled. *Please not however that every backends will appear in the OpenAPI documentation, as FastAPI resolves it statically.*
+* `get_enabled_backends`: Optional dependency callable returning a list of enabled authentication backends. Useful if you want to dynamically enable some authentication backends based on external logic, like a configuration in database. By default, all specified authentication backends are enabled. *Please note however that every backends will appear in the OpenAPI documentation, as FastAPI resolves it statically.*
 
 !!! tip "Create it once and reuse it"
     This function is a **factory**, a function returning another function 🤯
